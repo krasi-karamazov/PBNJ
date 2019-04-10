@@ -1,0 +1,59 @@
+ext {
+    compileSdkVersion=28
+    minSdkVersion='15'
+    targetSdkVersion='28'
+    kotlinVersion='1.3.21'
+
+    //libs
+    rxJavaVersion='2.2.8'
+    okHttpVersion='3.14.0'
+    retrofitVersion='2.5.0'
+    lifeCycleVersion='2.0.0'
+    javaxAnnotationVersion = '1.0'
+    daggerVersion='2.22.1'
+    javaxInjectVersion='1'
+
+    //Testing
+    jUnitVersion = '4.12'
+    assertJVersion = '3.8.0'
+    mockitoKotlinVersion = '1.5.0'
+    testRunnerVersion = '1.0.2'
+    espressoVersion = '3.0.2'
+
+    domainDependencies=[
+            [configuration: "implementation", dependency:"io.reactivex.rxjava2:rxjava:$rxJavaVersion"],
+            [configuration: "implementation", dependency: "javax.annotation:jsr250-api:$javaxAnnotationVersion"],
+            [configuration: "implementation", dependency: "javax.inject:javax.inject:$javaxInjectVersion"]
+    ]
+
+    domainTestDependencies=[
+            [configuration: "testImplementation", dependency:"junit:junit:$jUnitVersion"],
+            [configuration: "androidTestImplementation", dependency:"com.android.support.test:runner:$testRunnerVersion"],
+            [configuration: "androidTestImplementation", dependency:"com.android.support.test.espresso:espresso-core:$espressoVersion"]
+    ]
+
+    modelDependencies=[
+            [configuration: "implementation", dependency:"io.reactivex.rxjava2:rxjava:$rxJavaVersion"],
+            [configuration: "implementation", dependency:"com.squareup.okhttp3:okhttp:$okHttpVersion"],
+            [configuration: "implementation", dependency:"com.squareup.retrofit2:retrofit:$retrofitVersion"]
+    ]
+
+    modelTestDependencies=[
+            [configuration: "testImplementation", dependency:"junit:junit:$jUnitVersion"],
+            [configuration: "androidTestImplementation", dependency:"com.android.support.test:runner:$testRunnerVersion"],
+            [configuration: "androidTestImplementation", dependency:"com.android.support.test.espresso:espresso-core:$espressoVersion"]
+    ]
+
+    presentationDependencies=[
+            [configuration: "implementation", dependency: "javax.annotation:jsr250-api:$javaxAnnotationVersion"],
+            [configuration: "implementation", dependency: "javax.inject:javax.inject:$javaxInjectVersion"],
+            [configuration: "implementation", dependency: "javax.inject:javax.inject:$javaxInjectVersion"]
+    ]
+
+    presentationTestDependencies=[
+            [configuration: "testImplementation", dependency:"junit:junit:$jUnitVersion"],
+            [configuration: "androidTestImplementation", dependency:"com.android.support.test:runner:$testRunnerVersion"],
+            [configuration: "androidTestImplementation", dependency:"com.android.support.test.espresso:espresso-core:$espressoVersion"]
+    ]
+
+}
