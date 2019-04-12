@@ -9,8 +9,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
-        minSdkVersion minSdkVersion
-        targetSdkVersion targetSdkVersion
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
     }
@@ -19,5 +19,9 @@ android {
         release {
             minifyEnabled false
         }
+    }
+
+    androidExtensions {
+        experimental = true
     }
 }

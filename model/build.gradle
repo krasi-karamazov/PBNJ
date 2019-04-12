@@ -1,6 +1,7 @@
 apply from: "$rootDir/common-library.gradle"
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 dependencies {
     def modelDependencies = rootProject.ext.modelDependencies
@@ -13,5 +14,4 @@ dependencies {
     modelTestDependencies.each{
         add(it.configuration, it.dependency)
     }
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
