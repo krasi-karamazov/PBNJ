@@ -24,6 +24,7 @@ ext {
     domainDependencies=[
             [configuration: "implementation", dependency:"io.reactivex.rxjava2:rxjava:$rxJavaVersion"],
             [configuration: "implementation", dependency: "javax.annotation:jsr250-api:$javaxAnnotationVersion"],
+            [configuration: "implementation", dependency: project(":model")],
             [configuration: "implementation", dependency: "javax.inject:javax.inject:$javaxInjectVersion"]
     ]
 
