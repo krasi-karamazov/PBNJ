@@ -5,6 +5,10 @@ import javax.inject.Inject
 
 class SharedPreferencesCache @Inject constructor(val sharedPreferences: SharedPreferences): Cache<String, String> {
 
+    companion object{
+        val USERNAME_KEY = "username"
+    }
+
     override fun saveData(key: String, value: String) {
         sharedPreferences.edit().putString(key, value).apply()
     }

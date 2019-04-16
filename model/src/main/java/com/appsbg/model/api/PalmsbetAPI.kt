@@ -32,17 +32,16 @@ interface PalmsbetAPI {
     fun getNews(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS): Single<NewsWrapper>
 
     @GET("/api/get?notifications=1locale=bg")
-    fun getNotifications(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Query("username") username: String): Call<Notification>
+    fun getNotifications(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Query("username") username: String): Single<Notification>
 
     @GET("/api/get?about=1locale=bg")
-    fun getAbout(@Header("user") user: String = API_USER, @Header("pass") pass: String= API_PASS, @Query("username") username: String): Call<About>
+    fun getAbout(@Header("user") user: String = API_USER, @Header("pass") pass: String= API_PASS, @Query("username") username: String): Single<About>
 
     @GET("/api/get?terms=1locale=bg")
-    fun getTerms(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Query("username") username: String): Call<Terms>
+    fun getTerms(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Query("username") username: String): Single<Terms>
 
     @POST("/api/push_tags")
     @FormUrlEncoded
-    fun sendTags(
-        @Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Field("username") username: String, @Field("tags") tags: String
-    ): Call<Void>
+    fun sendTags(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Field("username") username: String, @Field("tags") tags: String
+    ): Single<Void>
 }

@@ -1,14 +1,13 @@
 package com.appsbg.model.repository
 
 import com.appsbg.model.api.PalmsbetAPI
-import com.appsbg.model.poko.casinos.Casino
 import com.appsbg.model.poko.casinos.CasinosWrapper
 import io.reactivex.Single
 import javax.inject.Inject
 
-class CasinosRepository @Inject constructor(palmsbetAPI: PalmsbetAPI): BaseRepository<List<Casino>>(palmsbetAPI) {
+class CasinosRepository @Inject constructor(palmsbetAPI: PalmsbetAPI): BaseRepository<CasinosWrapper>(palmsbetAPI) {
 
-    override fun getItems(): Single<List<Casino>> {
-        return palmsBetApi.getCasinos().flatMap { wrapper: CasinosWrapper -> Single.just(wrapper.casinos) }
+    override fun getItems(): Single<CasinosWrapper> {
+        return palmsBetApi.getCasinos()
     }
 }
