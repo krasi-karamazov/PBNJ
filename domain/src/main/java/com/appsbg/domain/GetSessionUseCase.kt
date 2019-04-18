@@ -1,5 +1,12 @@
 package com.appsbg.domain
 
+import com.appsbg.model.repository.LoginRepository
+import io.reactivex.Single
 import javax.inject.Inject
 
-class GetSessionUseCase @Inject constructor(): BaseUsecase<String, String>()
+class GetSessionUseCase @Inject constructor(private var repo: LoginRepository): BaseUsecase<String, String>(repo) {
+    override fun getData(): Single<String> {
+        return repo.getItems()
+    }
+
+}
