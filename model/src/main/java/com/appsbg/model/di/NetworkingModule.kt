@@ -1,6 +1,9 @@
 package com.appsbg.model.di
 
-import com.appsbg.model.api.BASE_URL
+import com.appsbg.model.api.HostSelectionInterceptor
+import com.appsbg.model.api.LoginApi
+import com.appsbg.model.api.PALMSBET_BASE_URL
+import com.appsbg.model.api.PalmsbetAPI
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -21,22 +24,30 @@ class NetworkingModule {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(MoshiConverterFactory.create())
             .client(okHttpClient)
-            .baseUrl(BASE_URL)
+            .baseUrl(PALMSBET_BASE_URL)
             .build()
     }
 
     @Provides
     @Singleton
-    internal fun provideOkHttpClient(): OkHttpClient {
-        return createHttpClient()
-    }
+    internal fun providePalmsBetApi(retrofit: Retrofit): PalmsbetAPI = retrofit.create(PalmsbetAPI::class.java)
 
-    private fun createHttpClient(): OkHttpClient {
+    @Provides
+    @Singleton
+    internal fun provideLoginApi(retrofit: Retrofit): LoginApi = retrofit.create(LoginApi::class.java)
+
+    @Provides
+    @Singleton
+    internal fun provideOkHttpClient(hostSelectionInterceptor: HostSelectionInterceptor): OkHttpClient {
         val loggingInterceptorBody = HttpLoggingInterceptor()
         loggingInterceptorBody.level = HttpLoggingInterceptor.Level.BODY
 
         val loggingInterceptorHeaders = HttpLoggingInterceptor()
         loggingInterceptorHeaders.level = HttpLoggingInterceptor.Level.HEADERS
-        return OkHttpClient.Builder().cache(null).addInterceptor(loggingInterceptorBody).connectTimeout(30, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
+        return OkHttpClient.Builder().cache(null)
+            .addInterceptor(hostSelectionInterceptor)
+            .addInterceptor(loggingInterceptorBody)
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS).build()
     }
 }

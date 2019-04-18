@@ -1,7 +1,9 @@
 package com.appsbg.model.cache
 
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class InMemoryCache @Inject constructor(): Cache<String, String> {
 
     private val innerCache: MutableMap<String, String> = mutableMapOf()

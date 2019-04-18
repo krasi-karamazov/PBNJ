@@ -2,7 +2,9 @@ package com.appsbg.model.cache
 
 import android.content.SharedPreferences
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class SharedPreferencesCache @Inject constructor(val sharedPreferences: SharedPreferences): Cache<String, String> {
 
     companion object{
