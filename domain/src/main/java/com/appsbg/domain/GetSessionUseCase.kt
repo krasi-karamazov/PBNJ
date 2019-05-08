@@ -5,8 +5,8 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class GetSessionUseCase @Inject constructor(private var repo: LoginRepository): BaseUsecase<String, String>(repo) {
-    override fun getData(): Single<String> {
-        return repo.getItems()
+    override fun getData(args: Map<String, Any>?): Single<String> {
+        return repo.getItems(args)
     }
 
 }

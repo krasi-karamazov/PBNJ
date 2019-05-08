@@ -9,7 +9,7 @@ import javax.inject.Inject
 @Reusable
 class CasinosRepository @Inject constructor(palmsbetAPI: PalmsbetAPI): BaseRepository<CasinosWrapper>(palmsbetAPI) {
 
-    override fun getItems(): Single<CasinosWrapper> {
+    override fun getItems(args: Map<String, Any>?): Single<CasinosWrapper> {
         return palmsBetApi.getCasinos()
     }
 }

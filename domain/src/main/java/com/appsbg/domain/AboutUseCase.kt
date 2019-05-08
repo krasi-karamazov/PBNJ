@@ -7,9 +7,9 @@ import javax.inject.Inject
 
 class AboutUseCase @Inject constructor(val repo: AboutRepository): BaseUsecase<About, String>(repo) {
 
-    override fun getData(): Single<String> {
-        return repo.getItems()
-            .flatMap { about:About -> Single.just(about.description) }
+    override fun getData(args: Map<String, Any>?): Single<String> {
+        return repo.getItems(null)
+            .flatMap { about -> Single.just(about.description) }
     }
 
 }

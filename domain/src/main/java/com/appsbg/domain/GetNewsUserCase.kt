@@ -8,8 +8,8 @@ import javax.inject.Inject
 
 class GetNewsUserCase @Inject constructor(val repo:NewsRepository): BaseUsecase<NewsWrapper, List<News>>(repo) {
 
-    override fun getData(): Single<List<News>> {
-        return repo.getItems().flatMap { wrapper: NewsWrapper -> Single.just(wrapper.news) }
+    override fun getData(args: Map<String, Any>?): Single<List<News>> {
+        return repo.getItems(args).flatMap { wrapper: NewsWrapper -> Single.just(wrapper.news) }
     }
 
 }

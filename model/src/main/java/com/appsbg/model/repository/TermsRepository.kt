@@ -13,7 +13,7 @@ class TermsRepository @Inject constructor(palmsbetAPI: PalmsbetAPI): BaseReposit
     @Inject
     internal lateinit var sharedPreferencesCache: SharedPreferencesCache
 
-    override fun getItems(): Single<Terms> {
-        return palmsBetApi.getTerms(username = sharedPreferencesCache.getData(SharedPreferencesCache.USERNAME_KEY)!!)
+    override fun getItems(args: Map<String, Any>?): Single<Terms> {
+        return palmsBetApi.getTerms()
     }
 }

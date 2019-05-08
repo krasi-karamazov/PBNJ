@@ -20,11 +20,11 @@ interface PalmsbetAPI {
     }
 
     @GET("/centr-api?")
-    fun getSession(@Query("payload_jsonrpc") jsonString: String, @Query("api_key") apiKey: String = "myPlay/b93d8fecv8016d3155dc09996d65fe5f", @Query("checksum") checksum: String = "2828d8786c9323cb9a47846bb974d0a1")
+    fun getSession(@Query("payload_jsonrpc") jsonString: String, @Query("api_key") apiKey: String = "myPlay/b93d8fecv8016d3155dc09996d65fe5f", @Query("checksum") checksum: String = "2828d8786c9323cb9a47846bb974d0a1"): String
 
 
     @GET("/api/e/?")
-    fun encryptPassword(@Header("user") user: String, @Header("pass") pass: String, @Query("i[]") encryptedPass: String)
+    fun encryptPassword(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Query("i[]") encryptedPass: String): Single<String>
 
     @GET("/api/get?news=1&casinos=1&cities=1&about=1&terms=1&news=1&api=1&locale=bg")
     fun getAll(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS): Single<PalmsbetDataWrapper>
@@ -42,10 +42,10 @@ interface PalmsbetAPI {
     fun getNotifications(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Query("username") username: String): Single<Notification>
 
     @GET("/api/get?about=1locale=bg")
-    fun getAbout(@Header("user") user: String = API_USER, @Header("pass") pass: String= API_PASS, @Query("username") username: String): Single<About>
+    fun getAbout(@Header("user") user: String = API_USER, @Header("pass") pass: String= API_PASS): Single<About>
 
     @GET("/api/get?terms=1locale=bg")
-    fun getTerms(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS, @Query("username") username: String): Single<Terms>
+    fun getTerms(@Header("user") user: String = API_USER, @Header("pass") pass: String = API_PASS): Single<Terms>
 
     @POST("/api/push_tags")
     @FormUrlEncoded
