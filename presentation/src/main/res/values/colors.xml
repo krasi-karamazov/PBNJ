@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#152553</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#303F9F</color>
+
+    <color name="c_blue">#152553</color>
+    <color name="c_gold">#ca9f3e</color>
+    <color name="c_silver">#9a9a9a</color>
+    <color name="c_bronze">#505050</color>
+    <color name="c_text">#353b3e</color>
+    <color name="c_text_white">#ffffff</color>
+    <color name="c_text_grey">#aaaaaa</color>
+    <color name="c_grey">#747474</color>
+
+</resources>

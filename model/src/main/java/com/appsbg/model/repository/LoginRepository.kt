@@ -27,7 +27,7 @@ class LoginRepository @Inject constructor(private var palmsbetAPI: PalmsbetAPI) 
                 val sessionRequestPoko = SessionRequestPoko(params = sessionParamsPoko)
 
                 val moshi = Moshi.Builder().build()
-                val jsonAdapter = moshi.adapter<SessionRequestPoko>(SessionRequestPoko::class.java!!)
+                val jsonAdapter = moshi.adapter<SessionRequestPoko>(SessionRequestPoko::class.java)
                 val json = jsonAdapter.toJson(sessionRequestPoko)
                 palmsbetAPI.getSession(json)
             }

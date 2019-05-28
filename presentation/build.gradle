@@ -11,4 +11,6 @@ dependencies{
     presentationTestDependencies.each{
         add(it.configuration, it.dependency)
     }
+    api project(path: ':domain')
+    implementation project(path: ':model')
 }
