@@ -36,7 +36,6 @@ ext {
             [configuration: "implementation", dependency: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"],
             [configuration: "implementation", dependency: "androidx.appcompat:appcompat:$appCompatVersion"],
             [configuration: "implementation", dependency: "androidx.core:core-ktx:$ktxVersion"],
-            [configuration: "implementation", dependency: "androidx.constraintlayout:constraintlayout:$constraintVersion"],
             [configuration: "implementation", dependency: "com.squareup.okhttp3:okhttp:$okHttpVersion"],
             [configuration: "implementation", dependency:"com.squareup.retrofit2:retrofit:$retrofitVersion"]
     ]
@@ -88,6 +87,7 @@ ext {
             [configuration: "implementation", dependency: "com.google.dagger:dagger-android:$daggerVersion"],
             [configuration: "implementation", dependency: "com.google.dagger:dagger-android-support:$daggerVersion"],
             [configuration: "kapt", dependency: "com.google.dagger:dagger-android-processor:$daggerVersion"],
+            [configuration: "implementation", dependency: "androidx.constraintlayout:constraintlayout:$constraintVersion"],
             [configuration: "kapt", dependency: "com.google.android.material:material:$designSupportVersion"]
     ]
 
