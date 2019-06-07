@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.appsbg.presentation.factory.ViewModelFactory
 import com.appsbg.presentation.viewmodel.splash.SplashViewModel
+import com.appsbg.presentation.viewmodel.welcome.WelcomeViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -17,7 +18,12 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(SplashViewModel::class)
-    internal abstract fun postListViewModel(viewModel: SplashViewModel): ViewModel
+    internal abstract fun bindSplashViewModel(viewModel: SplashViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(WelcomeViewModel::class)
+    internal abstract fun bindWelcomeViewModel(viewModel: WelcomeViewModel): ViewModel
 
     //Add more ViewModels here
 }

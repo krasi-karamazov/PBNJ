@@ -61,7 +61,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/info"
                 android:layout_weight="1"
-                android:onClick="onSkipClicked"
                 android:background="@drawable/transparent_button_selector"
                 android:textColor="@drawable/text_selector" />
             <View
@@ -72,7 +71,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/signin"
                 android:layout_weight="1"
-                android:onClick="onLoginClicked"
                 android:background="@drawable/blue_button_selector"
                 android:textColor="@drawable/blue_text_selector"/>
         </LinearLayout>
