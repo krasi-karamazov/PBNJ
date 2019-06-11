@@ -17,13 +17,16 @@ class UserManager @Inject constructor(val accountManager: AccountManager) {
     var currentUser: User? = null
 
     init {
-        val isLoggedIn = isLoggedIn()
-
-
+        val account = getCurrentAccount()
+        if(account != null) {
+            accountName = account.name
+            currentUser = AuthenticatedUser(accountName!!, accountManager.getPassword(account))
+        } else {
+            currentUser = NotAuthenticated
+        }
     }
 
-
-    private fun isLoggedIn(): Account? {
+    private fun getCurrentAccount(): Account? {
         val accounts: Array<Account> = accountManager.accounts
         for(account in accounts) {
             if(account.type.equals(palmsBetAccountType)) {
