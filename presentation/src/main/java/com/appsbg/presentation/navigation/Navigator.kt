@@ -15,4 +15,8 @@ class Navigator {
     fun showWelcomeScreen() {
         //activity!!.startActivity(Intent(activity, We::class.java))
     }
+
+    fun showLoginScreen() {
+        //activity!!.startActivity(Intent(activity, LoginActivity::class.java))
+    }
 }

@@ -1,6 +1,9 @@
 package com.appsbg.navigation.coordinators
 
-class TermsFlowCoordinator {
+import com.appsbg.navigation.Navigator
+import javax.inject.Inject
+
+class TermsFlowCoordinator @Inject constructor(navigator: Navigator) {
 
     fun start(){
         TODO("start Terms flow here")

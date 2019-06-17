@@ -1,6 +1,9 @@
 package com.appsbg.navigation.coordinators
 
-class UserDetailsFlowCorrdinator {
+import com.appsbg.navigation.Navigator
+import javax.inject.Inject
+
+class UserDetailsFlowCorrdinator @Inject constructor(navigator: Navigator) {
 
     fun start(){
         TODO("start UserDetails flow here")

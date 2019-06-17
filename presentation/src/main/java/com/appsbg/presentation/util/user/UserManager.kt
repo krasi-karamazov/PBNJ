@@ -3,17 +3,17 @@ package com.appsbg.presentation.util.user
 import android.accounts.Account
 import android.accounts.AccountManager
 import android.annotation.SuppressLint
-import android.content.Context
 import javax.inject.Inject
+import javax.inject.Singleton
 
 @SuppressLint("MissingPermission")
+@Singleton
 class UserManager @Inject constructor(val accountManager: AccountManager) {
 
     companion object {
         const val palmsBetAccountType = "com.appsbg.palmsbet"
     }
     var accountName: String? = null
-    var isLoggedIn: Boolean = false
     var currentUser: User? = null
 
     init {
@@ -34,5 +34,9 @@ class UserManager @Inject constructor(val accountManager: AccountManager) {
             }
         }
         return null
+    }
+
+    fun checkUserStatus(): User? {
+        return currentUser
     }
 }
