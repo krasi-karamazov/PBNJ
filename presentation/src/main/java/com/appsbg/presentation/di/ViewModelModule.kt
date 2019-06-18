@@ -3,6 +3,7 @@ package com.appsbg.presentation.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.appsbg.presentation.factory.ViewModelFactory
+import com.appsbg.presentation.viewmodel.casinos.CasinosListViewModel
 import com.appsbg.presentation.viewmodel.splash.SplashViewModel
 import com.appsbg.presentation.viewmodel.welcome.WelcomeViewModel
 import dagger.Binds
@@ -24,6 +25,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(WelcomeViewModel::class)
     internal abstract fun bindWelcomeViewModel(viewModel: WelcomeViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CasinosListViewModel::class)
+    internal abstract fun bindCasinosListViewModel(viewModel: CasinosListViewModel): ViewModel
 
     //Add more ViewModels here
 }

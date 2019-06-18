@@ -14,7 +14,7 @@ data class Promo(
     @Json(name = "end_time")
     val endTime: String,
     @Json(name = "id")
-    override var id: String,
+    var id: String,
     @Json(name = "month_date")
     val monthDate: String,
     @Json(name = "month_day")

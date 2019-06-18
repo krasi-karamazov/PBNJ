@@ -3,6 +3,7 @@
           package="com.appsbg.palmsbetapp">
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -11,13 +12,16 @@
             android:supportsRtl="true"
             android:name=".application.PalmsbetApplication"
             android:theme="@style/AppTheme">
-        <activity android:name="com.appsbg.presentation.view.splash.SplashActivity">
+        <activity android:name="com.appsbg.presentation.view.splash.SplashActivity"
+        android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.appsbg.presentation.view.welcome.WelcomeActivity"
+        android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

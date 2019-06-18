@@ -9,5 +9,5 @@ data class About(
     @Json(name = "description")
     val description: String,
     @Json(name = "id")
-    override var id: String
+    var id: String
 ): BasePalmsBetPoko(id)

@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".WelcomeActivity"
-    tools:showIn="@layout/activity_welcome">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:showIn="@layout/activity_welcome">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="370dp"
-            android:src="@drawable/welcome_image"
-            android:scaleType="centerCrop"/>
-        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin">
-            <LinearLayout
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center_horizontal">
-                <TextView
+                android:layout_height="370dp"
+                android:src="@drawable/welcome_image"
+                android:scaleType="centerCrop"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+            <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ДОБРЕ ДОШЛИ В"/>
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/c_gold"
-                    android:textStyle="bold"
-                    android:text="PALMS BET"
-                    android:layout_marginLeft="5dp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ДОБРЕ ДОШЛИ В"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_gold"
+                        android:textStyle="bold"
+                        android:text="PALMS BET"
+                        android:layout_marginLeft="5dp"/>
             </LinearLayout>
             <TextView
-                android:id="@+id/welcome_text"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:text="@string/WelcomeMessage"/>
+                    android:id="@+id/welcome_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/WelcomeMessage"/>
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/activity_horizontal_margin">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/activity_horizontal_margin">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/info"
-                android:layout_weight="1"
-                android:background="@drawable/transparent_button_selector"
-                android:textColor="@drawable/text_selector" />
+                    android:id="@+id/btn_skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info"
+                    android:layout_weight="1"
+                    android:background="@drawable/transparent_button_selector"
+                    android:textColor="@drawable/text_selector"/>
             <View
-                android:layout_width="@dimen/activity_horizontal_margin"
-                android:layout_height="match_parent"/>
+                    android:layout_width="@dimen/activity_horizontal_margin"
+                    android:layout_height="match_parent"/>
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/signin"
-                android:layout_weight="1"
-                android:background="@drawable/blue_button_selector"
-                android:textColor="@drawable/blue_text_selector"/>
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signin"
+                    android:layout_weight="1"
+                    android:background="@drawable/blue_button_selector"
+                    android:textColor="@drawable/blue_text_selector"/>
         </LinearLayout>
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@ data class Casino(
     @Json(name = "group_id")
     val groupId: String,
     @Json(name = "id")
-    override var id: String,
+    var id: String,
     @Json(name = "images")
     val images: List<Image>,
     @Json(name = "jackpot_bronze")

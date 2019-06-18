@@ -1,12 +1,12 @@
-package com.appsbg.navigation.coordinators
+package com.appsbg.presentation.navigation.coordinators
 
-import com.appsbg.navigation.Navigator
+import com.appsbg.presentation.navigation.Navigator
 import javax.inject.Inject
 
-class CasinoFlowCoordinator @Inject constructor(navigator: Navigator) {
+class CasinoFlowCoordinator @Inject constructor(val navigator: Navigator) {
 
     fun start(){
-        TODO("start Casino flow here")
+        navigator.showCasinosListActivity()
     }
 
     fun viewCasinoDetails(id: Int) {

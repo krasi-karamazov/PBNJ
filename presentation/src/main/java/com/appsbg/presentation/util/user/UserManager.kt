@@ -36,7 +36,10 @@ class UserManager @Inject constructor(val accountManager: AccountManager) {
         return null
     }
 
-    fun checkUserStatus(): User? {
-        return currentUser
+    fun isUserLoggedIn(): Boolean {
+        if(currentUser != null) {
+            return currentUser is AuthenticatedUser
+        }
+        return false
     }
 }

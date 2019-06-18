@@ -11,5 +11,5 @@ data class News(val images: List<Image>,
                 val name: String,
                 val date_entered: String,
                 val description: String,
-                override var id: String,
+                var id: String,
                 val imageNames:List<String>): BasePalmsBetPoko(id), Parcelable

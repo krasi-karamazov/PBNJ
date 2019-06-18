@@ -1,6 +1,6 @@
-package com.appsbg.navigation.coordinators
+package com.appsbg.presentation.navigation.coordinators
 
-import com.appsbg.navigation.Navigator
+import com.appsbg.presentation.navigation.Navigator
 import javax.inject.Inject
 
 class SettingsFlowCoordinator @Inject constructor(navigator: Navigator) {

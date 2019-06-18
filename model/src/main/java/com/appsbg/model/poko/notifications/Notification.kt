@@ -8,7 +8,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Notification(
     @Json(name = "id")
-    override var id: String,
+    var id: String,
     @Json(name = "username")
     val username: String,
     @Json(name = "title")

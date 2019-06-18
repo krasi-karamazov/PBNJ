@@ -7,5 +7,5 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Image(val filename: String,
                  val content_id: String,
-                 override var id: String,
+                 var id: String,
                  val type: String): BasePalmsBetPoko(id), Parcelable

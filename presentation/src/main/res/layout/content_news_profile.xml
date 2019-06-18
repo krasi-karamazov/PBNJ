@@ -1,78 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:showIn="@layout/activity_news_profile">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:showIn="@layout/activity_news_profile">
 
     <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/c_text"
-                android:layout_marginTop="@dimen/text_margin"
-                android:layout_marginLeft="@dimen/text_margin"
-                android:layout_marginRight="@dimen/text_margin"/>
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/c_silver"
-                android:layout_marginTop="3dp"
-                android:layout_marginLeft="@dimen/text_margin"
-                android:layout_marginRight="@dimen/text_margin"
-                android:layout_marginBottom="8dp"/>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="260dp">
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/pager"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scrollbars="none"/>
-                <ImageView
-                    android:id="@+id/slider_arrow_left"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_slider_arrows_1"
-                    android:layout_gravity="center_vertical|left"
-                    android:tint="@color/c_text_white"/>
-                <ImageView
-                    android:id="@+id/slider_arrow_right"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_arrow_right_1"
-                    android:layout_gravity="center_vertical|right"
-                    android:tint="@color/c_text_white"/>
-            </FrameLayout>
-            <WebView
-                android:id="@+id/webView"
+            android:layout_height="match_parent">
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/text_margin"/>
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/c_text"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:layout_marginLeft="@dimen/text_margin"
+                    android:layout_marginRight="@dimen/text_margin"/>
+            <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/c_silver"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="@dimen/text_margin"
+                    android:layout_marginRight="@dimen/text_margin"
+                    android:layout_marginBottom="8dp"/>
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp">
+                <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"/>
+                <ImageView
+                        android:id="@+id/slider_arrow_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_slider_arrows_1"
+                        android:layout_gravity="center_vertical|left"
+                        android:tint="@color/c_text_white"/>
+                <ImageView
+                        android:id="@+id/slider_arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_right_1"
+                        android:layout_gravity="center_vertical|right"
+                        android:tint="@color/c_text_white"/>
+            </FrameLayout>
+            <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/text_margin"/>
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/c_blue"
-        android:textColor="@color/c_text_white"
-        android:gravity="center_horizontal"
-        android:paddingBottom="8dp"
-        android:paddingTop="8dp"
-        android:textSize="@dimen/text_large"
-        android:text="ИГРАТА ПРОДЪЛЖАВА"
-        android:layout_gravity="bottom"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_blue"
+            android:textColor="@color/c_text_white"
+            android:gravity="center_horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/text_large"
+            android:text="ИГРАТА ПРОДЪЛЖАВА"
+            android:layout_gravity="bottom"/>
 
 </FrameLayout>

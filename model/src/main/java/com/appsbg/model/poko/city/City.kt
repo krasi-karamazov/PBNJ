@@ -10,5 +10,5 @@ data class City(
     @Json(name = "name")
     val name: String,
     @Json(name = "id")
-    override var id: String
+    var id: String
 ): BasePalmsBetPoko(id), Parcelable

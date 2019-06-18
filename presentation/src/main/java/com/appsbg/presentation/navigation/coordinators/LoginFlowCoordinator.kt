@@ -1,6 +1,6 @@
-package com.appsbg.navigation.coordinators
+package com.appsbg.presentation.navigation.coordinators
 
-import com.appsbg.navigation.Navigator
+import com.appsbg.presentation.navigation.Navigator
 import javax.inject.Inject
 
 class LoginFlowCoordinator @Inject constructor(val navigator: Navigator) {
@@ -10,7 +10,7 @@ class LoginFlowCoordinator @Inject constructor(val navigator: Navigator) {
     }
 
     fun showWelcomeScreen() {
-
+        navigator.showWelcomeScreen()
     }
 
     fun showLoginScreen(){
