@@ -31,13 +31,13 @@
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ДОБРЕ ДОШЛИ В"/>
+                        android:text="@string/welcome_string"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/c_gold"
                         android:textStyle="bold"
-                        android:text="PALMS BET"
+                        android:text="@string/palms_bet"
                         android:layout_marginLeft="5dp"/>
             </LinearLayout>
             <TextView

@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
 import com.appsbg.presentation.factory.ViewModelFactory
 import com.appsbg.presentation.navigation.Navigator
-import com.appsbg.presentation.navigation.RootFlowCoordinator
-import com.appsbg.presentation.view.splash.SplashActivity
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 

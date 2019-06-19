@@ -19,6 +19,8 @@ ext {
     rxAndroidVersion='2.1.1'
     designSupportVersion='1.0.0-rc01'
     coordinatorLayoutVersion='1.0.0'
+    recyclerViewVersion='1.1.0-alpha06'
+    circleImageViewVersion='3.0.0'
 
     //Testing
     jUnitVersion = '4.12'
@@ -90,7 +92,10 @@ ext {
             [configuration: "kapt", dependency: "com.google.dagger:dagger-android-processor:$daggerVersion"],
             [configuration: "implementation", dependency: "androidx.constraintlayout:constraintlayout:$constraintVersion"],
             [configuration: "kapt", dependency: "com.google.android.material:material:$designSupportVersion"],
-            [configuration: "implementation", dependency: "androidx.coordinatorlayout:coordinatorlayout:$coordinatorLayoutVersion"]
+            [configuration: "implementation", dependency: "androidx.coordinatorlayout:coordinatorlayout:$coordinatorLayoutVersion"],
+            [configuration: "implementation", dependency: "androidx.recyclerview:recyclerview:$recyclerViewVersion"],
+            [configuration: "implementation", dependency: "androidx.appcompat:appcompat:$appCompatVersion"],
+            [configuration: "implementation", dependency: "de.hdodenhof:circleimageview:$circleImageViewVersion"]
     ]
 
     presentationTestDependencies=[

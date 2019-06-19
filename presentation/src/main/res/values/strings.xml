@@ -54,4 +54,6 @@
     <string name="server_connection_error">Проблем със сървъра, моля опитайте отново</string>
     <string name="network_problem">Network problem</string>
     <string name="try_again_later">Please try again later.</string>
+    <string name="welcome_string">ДОБРЕ ДОШЛИ В</string>
+    <string name="palms_bet">PALMS BET</string>
 </resources>
