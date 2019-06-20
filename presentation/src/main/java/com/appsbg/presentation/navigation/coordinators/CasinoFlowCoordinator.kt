@@ -9,7 +9,7 @@ class CasinoFlowCoordinator @Inject constructor(val navigator: Navigator) {
         navigator.showCasinosListActivity()
     }
 
-    fun viewCasinoDetails(id: Int) {
+    fun viewCasinoDetails(id: String) {
         TODO("view Casino details here")
     }
 }

@@ -23,7 +23,7 @@ class WelcomeActivity: BaseActivity() {
 
     private fun initView() {
         btn_skip.setOnClickListener{viewModel.onSkip()}
-        btn_skip.setOnClickListener{viewModel.onLogin()}
+        btn_login.setOnClickListener{viewModel.onLogin()}
     }
 
     override fun getLayoutId(): Int = R.layout.activity_welcome

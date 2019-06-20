@@ -22,6 +22,8 @@
         </activity>
         <activity android:name="com.appsbg.presentation.view.welcome.WelcomeActivity"
         android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.appsbg.presentation.view.casinos.CasinosListActivity"
+                  android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

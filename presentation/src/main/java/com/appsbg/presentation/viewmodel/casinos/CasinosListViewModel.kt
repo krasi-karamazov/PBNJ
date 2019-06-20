@@ -24,4 +24,8 @@ class CasinosListViewModel @Inject constructor(val useCase: CasinosUseCase, over
             .subscribe())
         return data
     }
+
+    fun openCasinoDetails(casinoId: String) {
+        rootFlowCoordinator.casinoFlowCoordinator.viewCasinoDetails(casinoId)
+    }
 }
