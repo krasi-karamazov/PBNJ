@@ -18,15 +18,14 @@ abstract class BaseActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         AndroidInjection.inject(this)
         setContentView(getLayoutId())
+    }
+
+    override fun onStart() {
+        super.onStart()
         navigator.activity = this
     }
 
     protected abstract fun getLayoutId(): Int
 
     inline fun <reified T: ViewModel> ViewModelFactory.get(): T = ViewModelProviders.of(this@BaseActivity, this)[T::class.java]
-
-    override fun onDestroy() {
-        navigator.activity = null
-        super.onDestroy()
-    }
 }

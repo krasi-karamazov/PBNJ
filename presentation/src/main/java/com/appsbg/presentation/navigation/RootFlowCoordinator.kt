@@ -8,7 +8,7 @@ import javax.inject.Singleton
 @Singleton
 class RootFlowCoordinator @Inject constructor(val userManager: UserManager,
                                               val aboutFlowCoordinator: AboutFlowCoordinator,
-                                              val userDetailsFlowCorrdinator: UserDetailsFlowCorrdinator,
+                                              val userDetailsFlowCoordinator: UserDetailsFlowCoordinator,
                                               val casinoFlowCoordinator: CasinoFlowCoordinator,
                                               val loginFlowCoordinator: LoginFlowCoordinator,
                                               val newsFlowCoordinator: NewsFlowCoordinator,

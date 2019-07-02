@@ -23,8 +23,8 @@ class CasinosListActivity: BaseActivity(), LifecycleOwner {
     private lateinit var viewModel: CasinosListViewModel
 
     private val casinosAdapter: CasinosListAdapter by lazy {
-        CasinosListAdapter{id: String, name: String ->
-            viewModel.openCasinoDetails(id)
+        CasinosListAdapter{casino ->
+            viewModel.openCasinoDetails(casino)
         }
     }
 

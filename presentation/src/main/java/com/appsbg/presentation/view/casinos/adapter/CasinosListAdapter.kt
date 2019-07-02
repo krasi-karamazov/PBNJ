@@ -1,5 +1,6 @@
 package com.appsbg.presentation.view.casinos.adapter
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +10,7 @@ import com.appsbg.presentation.utils.Utils
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_item.view.*
 
-class CasinosListAdapter(private val listener: (String, String) -> Unit): RecyclerView.Adapter<CasinosListAdapter.CasinosViewHolder>() {
+class CasinosListAdapter(private val listener: (Casino) -> Unit): RecyclerView.Adapter<CasinosListAdapter.CasinosViewHolder>() {
 
     var data: List<Casino> = mutableListOf()
         set(casinos) {
@@ -21,7 +22,7 @@ class CasinosListAdapter(private val listener: (String, String) -> Unit): Recycl
             field = casinos
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CasinosViewHolder = CasinosViewHolder(View.inflate(parent.context, R.layout.list_item, null))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CasinosViewHolder = CasinosViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false))
 
     override fun getItemCount(): Int = data.size
 
@@ -31,10 +32,10 @@ class CasinosListAdapter(private val listener: (String, String) -> Unit): Recycl
 
 
     inner class CasinosViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        fun bind(casino: Casino, listener: (String, String) -> Unit) = with(itemView){
+        fun bind(casino: Casino, listener: (Casino) -> Unit) = with(itemView){
             Picasso.get().load(Utils.imageUrlThumb(casino.images[0].filename)).into(this.thumb)
             this.name.text = casino.name
-            this.setOnClickListener{listener(casino.id, casino.name)}
+            this.setOnClickListener{listener(casino)}
         }
     }
 }

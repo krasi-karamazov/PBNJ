@@ -23,6 +23,7 @@ ext {
     circleImageViewVersion='3.0.0'
     picassoVersion='2.71828'
     materialComponentsVersion='1.1.0-alpha07'
+    googlePlayServicesVersion='17.0.0'
 
     //Testing
     jUnitVersion = '4.12'
@@ -99,7 +100,9 @@ ext {
             [configuration: "implementation", dependency: "androidx.appcompat:appcompat:$appCompatVersion"],
             [configuration: "implementation", dependency: "de.hdodenhof:circleimageview:$circleImageViewVersion"],
             [configuration: "implementation", dependency: "com.squareup.picasso:picasso:$picassoVersion"],
-            [configuration: "implementation", dependency: "com.google.android.material:material:$materialComponentsVersion"]
+            [configuration: "implementation", dependency: "com.google.android.material:material:$materialComponentsVersion"],
+            [configuration: "implementation", dependency: "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"],
+            [configuration: "implementation", dependency: "com.google.android.gms:play-services-location:$googlePlayServicesVersion"]
     ]
 
     presentationTestDependencies=[

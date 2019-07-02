@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".CasinoProfile"
@@ -17,7 +17,7 @@
             <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="260dp">
-                <android.support.v4.view.ViewPager
+                <androidx.viewpager.widget.ViewPager
                         android:id="@+id/pager"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -245,11 +245,11 @@
                                 android:drawableLeft="@drawable/game_area"/>
                     </LinearLayout>
                     <!--Map-->
-                    <fragment
+                    <!--<fragment
                             android:id="@+id/map"
-                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            class="com.google.android.gms.maps.SupportMapFragment"
                             android:layout_width="match_parent"
-                            android:layout_height="240dp"/>
+                            android:layout_height="240dp"/>-->
                 </LinearLayout>
 
                 <LinearLayout
@@ -280,7 +280,7 @@
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
     <FrameLayout
             android:id="@+id/call"
             android:layout_width="match_parent"

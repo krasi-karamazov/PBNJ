@@ -1,5 +1,6 @@
 package com.appsbg.presentation.di
 
+import com.appsbg.presentation.view.casinodetails.CasinoDetailsActivity
 import com.appsbg.presentation.view.casinos.CasinosListActivity
 import com.appsbg.presentation.view.splash.SplashActivity
 import com.appsbg.presentation.view.welcome.WelcomeActivity
@@ -17,4 +18,7 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector
     abstract fun bindCasinosListActivity(): CasinosListActivity
+
+    @ContributesAndroidInjector
+    abstract fun bindCasinoDetailsActivity(): CasinoDetailsActivity
 }

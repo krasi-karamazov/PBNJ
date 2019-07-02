@@ -4,6 +4,8 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -24,6 +26,9 @@
         android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name="com.appsbg.presentation.view.casinos.CasinosListActivity"
                   android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="com.appsbg.presentation.view.casinodetails.CasinoDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
